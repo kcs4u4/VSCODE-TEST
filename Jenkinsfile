@@ -38,7 +38,7 @@ node {
 			if (isUnix()) {
 				rmsg = sh returnStdout: true, script: "sfdx force:source:deploy -p force-app -u ${HUB_ORG}"
 			}else{
-			   rmsg = bat returnStdout: true, script: "sfdx force:source:deploy -d force-app -u ${HUB_ORG}"
+			   rmsg = bat returnStdout: true, script: "sfdx force:source:deploy -p force-app -u ${HUB_ORG}"
 			}
 			  
             printf rmsg
